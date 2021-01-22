@@ -35,7 +35,6 @@
               "./node_modules/jquery/dist/jquery.js",
               "./node_modules/popper.js/dist/umd/popper.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.js"
-              
             ]
           },
           "configurations": {
@@ -130,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "blogPessoal"
+  "defaultProject": "blogPessoal",
+  "cli": {
+    "analytics": "cd6fc206-86cf-47c1-8df0-4641bc851e2f"
+  }
 }
