@@ -11,7 +11,6 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { from } from 'rxjs';
 import { TemaComponent } from './tema/tema.component';
 
 @NgModule({
