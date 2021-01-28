@@ -1,12 +1,7 @@
 .fs-16{
-    font-size: 16pt;
+  font-size: 16pt;
 }
 
 a{
-    cursor: pointer;
-}
-
-.img-50-circle {
-    width: 50px;
-    height: 50px;
+  cursor: pointer;
 }

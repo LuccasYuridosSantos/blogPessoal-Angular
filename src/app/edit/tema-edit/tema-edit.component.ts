@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { environment } from './../../../environments/environment.prod';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Tema } from 'src/app/model/Tema';
-import { TemaService } from 'src/app/service/tema.service';
-import { environment } from 'src/environments/environment.prod';
+import { TemaService } from './../../service/tema.service';
+import { Tema } from './../../model/Tema';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tema-edit',
@@ -10,8 +10,8 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./tema-edit.component.css']
 })
 export class TemaEditComponent implements OnInit {
+
   tema: Tema = new Tema()
-  
 
   constructor(
     private temaService: TemaService,
@@ -19,28 +19,27 @@ export class TemaEditComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
-  ngOnInit(): void {
-    if (environment.token == '') {
+  ngOnInit() {
+    if(environment.token == ''){
       this.router.navigate(['/entrar'])
     }
 
     let id = this.route.snapshot.params['id']
-    this.findtByIdTema(id)
+    this.findByIdTema(id)
   }
 
-
-  findtByIdTema(id: number){
-    this.temaService.getByIdTema(id).subscribe((resp: Tema)=>{
+  findByIdTema(id: number){
+    this.temaService.getByIdTema(id).subscribe((resp: Tema) => {
       this.tema = resp
     })
   }
 
-
-  atualizarTema(){
+  atualizar(){
     this.temaService.putTema(this.tema).subscribe((resp: Tema)=>{
       this.tema = resp
-      alert('Tema atualizado com sucesso')
+      alert('Tema atualizado com sucesso!')
       this.router.navigate(['/tema'])
     })
   }
+
 }

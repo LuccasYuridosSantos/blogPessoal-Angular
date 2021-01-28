@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { TemaService } from './../service/tema.service';
+import { Tema } from './../model/Tema';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
-import { Tema } from '../model/Tema';
-import { TemaService } from '../service/tema.service';
+import { environment } from './../../environments/environment.prod';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tema',

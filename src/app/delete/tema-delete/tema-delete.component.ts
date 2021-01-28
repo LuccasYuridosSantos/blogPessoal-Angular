@@ -1,8 +1,8 @@
+import { environment } from './../../../environments/environment.prod';
+import { Router, ActivatedRoute } from '@angular/router';
+import { TemaService } from './../../service/tema.service';
+import { Tema } from './../../model/Tema';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Tema } from 'src/app/model/Tema';
-import { TemaService } from 'src/app/service/tema.service';
-import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-tema-delete',
